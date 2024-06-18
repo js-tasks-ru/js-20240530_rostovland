@@ -6,21 +6,6 @@
  */
 
 export function sortStrings(arr, param = 'asc') {
-    /*
-    пример из MDN
-
-    const items = ["réservé", "Premier", "Cliché", "communiqué", "café", "Adieu"];
-    items.sort((a, b) => a.localeCompare(b, "fr", { ignorePunctuation: true })); 
-    // ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
-    */
-    /*
-    console.log(
-        ['Z', 'a', 'z', 'ä'].sort(
-          new Intl.Collator('de', { caseFirst: 'upper' }).compare,
-        ),
-      );
-      // Expected output: Array ["a", "ä", "Z", "z"] */
-    
     let pattern = new Intl.Collator(['ru', 'en'], { caseFirst: 'upper' }).compare;
     let result = []; 
     switch (param) {
